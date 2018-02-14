@@ -1,0 +1,61 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#261d3a"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/networkerror"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Semidigit.com"
+            android:id="@+id/textView" />
+
+        <ImageView
+            android:id="@+id/btnphoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:contentDescription="Application Logo"
+            android:src="@mipmap/ic_launcher"
+            />
+
+    </LinearLayout>
+    <!--
+        <LinearLayout
+            android:id="@+id/networkerror1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#ffffff"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:text="No network connection"
+                android:textColor="#261d3a" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="Settings"
+                android:textSize="16sp"
+
+                android:textStyle="bold" />
+        </LinearLayout> -->
+</LinearLayout>

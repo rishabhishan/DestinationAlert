@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/ll"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/displayboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/buttonGo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+
+            android:onClick="startJourney"
+            android:orientation="vertical"
+            android:paddingBottom="24dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+
+            android:paddingTop="24dp">
+
+            <ImageView
+                android:id="@+id/iconstartstop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_navigation_white_48dp" />
+
+            <TextView
+                android:id="@+id/tvstartstop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="start"
+                android:textAllCaps="true"
+                android:textColor="#ffffff"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@id/buttonGo"
+            android:layout_alignTop="@id/buttonGo"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="24dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_toLeftOf="@id/buttonGo"
+            android:background="@color/view_background" />
+
+        <LinearLayout
+            android:id="@+id/display"
+
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/divider"
+            android:orientation="vertical"
+            android:paddingBottom="24dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="24dp">
+
+            <TextView
+                android:id="@+id/place_name_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left|center"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Destination"
+                android:textColor="@color/white"
+                android:textSize="24dp" />
+
+            <TextView
+
+                android:id="@+id/place_name_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-light"
+                android:gravity="left|center"
+                android:lineSpacingMultiplier="1.1"
+                android:singleLine="false"
+                android:text="Arumugum Mudaliar Road, Benagaluru 560027"
+                android:textColor="#bab6c0"
+                android:textSize="13dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/maps"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/displayboard"
+        map:cameraZoom="15"
+        map:mapType="normal" />
+
+</RelativeLayout>

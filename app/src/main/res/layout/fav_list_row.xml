@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="#ffffff"
+    android:gravity="left|center_vertical"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:layout_width="fill_parent"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:background="@drawable/rounded_circle_fav"
+        android:gravity="center"
+        android:id="@+id/textstart"
+        android:layout_height="50dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="50dp"
+        android:text="B"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="26dp"
+
+
+        />
+
+    <LinearLayout
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:ellipsize="end"
+            android:gravity="left|center"
+            android:id="@+id/place_name"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_width="match_parent"
+            android:maxLines="1"
+            android:scaleY="1.1"
+            android:singleLine="true"
+            android:text="Bellandur Central Mall"
+            android:textColor="@color/text_list_color"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:ellipsize="end"
+            android:gravity="left|center"
+            android:id="@+id/datetime"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:maxLength="25"
+            android:maxLines="1"
+            android:scaleY="1.1"
+            android:singleLine="true"
+            android:text="01/15 at 5:30 pm"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
